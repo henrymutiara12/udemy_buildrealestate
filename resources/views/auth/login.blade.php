@@ -1,6 +1,10 @@
 @extends('frontend.frontend_dashboard')
 @section('main')
+
+
     <!--Page Title-->
+
+
     <section class="page-title-two bg-color-1 centred">
         <div class="pattern-layer">
             <div class="pattern-1" style="background-image: url({{ asset('frontend/assets/images/shape/shape-9.png') }});">
@@ -65,17 +69,21 @@
 
                             <div class="tab" id="tab-2">
                                 <div class="inner-box">
-                                    <h4>Sign in</h4>
-                                    <form action="{{ route('register') }}" method="post" class="default-form">
+                                    <h4>Register</h4>
+
+                                    <form action="{{ route('register') }}" method="POST" class="default-form">
                                         @csrf
+
                                         <div class="form-group">
                                             <label>User name</label>
                                             <input type="text" name="name" id="name" required="">
                                         </div>
+
                                         <div class="form-group">
                                             <label>Email address</label>
                                             <input type="email" name="email" id="email" required="">
                                         </div>
+
                                         <div class="form-group">
                                             <label>Password</label>
                                             <input type="password" name="password" id="password" required="">
